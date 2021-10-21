@@ -10,6 +10,8 @@ function PomodoroProvider({ children }) {
 
   const [showTimer, setShowTimer] = useState(false);
 
+  const [count, setCount] = useState(25);
+
   return(
     <PomodoroContext.Provider
       value={ {
@@ -17,11 +19,14 @@ function PomodoroProvider({ children }) {
         minute,
         second,
         activityTime,
+        setActivityTime,
         setSecond,
         setMinute,
         setHour,
         showTimer,
-        setShowTimer
+        setShowTimer,
+        count,
+        setCount,
       } }
     >
       { children }
