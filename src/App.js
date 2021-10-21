@@ -1,12 +1,12 @@
 import './App.css';
-import Timer from './components/Timer';
+import MainPomodoro from './components/MainPomodoro';
 import PomodoroProvider from './context/PomodoroProvider';
 
 function App() {
   return (
     <main>
       <PomodoroProvider>
-        <Timer/>
+        <MainPomodoro/>
       </PomodoroProvider>
     </main>
   );
