@@ -2,6 +2,9 @@ import React, { useContext, useEffect }   from 'react';
 import PomodoroContext from "../context/PomodoroContext";
 
 import Timer from './Timer';
+import TimePicker from './TimePicker';
+import OnOffSwitch from './OnOffSwitch';
+import ResetButton from './ResetButton';
 
 
 function MainPomodoro() {
@@ -10,6 +13,9 @@ function MainPomodoro() {
   return (
     <div>
       { showTimer && <Timer /> }
+      { !showTimer && <TimePicker /> }
+      <OnOffSwitch />
+      { showTimer && <ResetButton /> }
     </div>
   );
 }
