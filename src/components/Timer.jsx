@@ -1,5 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect } from "react";
 import PomodoroContext from "../context/PomodoroContext";
+
+import ProgressBar from './ProgressBar';
+import atividade from '../assets/atividade.gif'
+import intervalo from '../assets/intervalo.gif'
+
 
 const lessThanZero = (number) => ((number < 0 || number === undefined) ? 0 : number);
 const TEN = 10;
@@ -7,16 +13,22 @@ const BellowTen = (number) => (number < TEN ? `0${number}` : number);
 
 
 function Timer() {
-  const { hour, minute, second, activityTime, setSecond, setMinute, setHour, showTimer, setShowTimer, setActivityTime, count, setCount } = useContext(PomodoroContext);
+  const { hour, minute, second, activityTime, setSecond, setMinute, setHour, setShowTimer, setActivityTime, count, setCount, setInitialTime, setInProgressTime, initialTime, inProgressTime } = useContext(PomodoroContext);
 
   const checkedMinute = lessThanZero(minute);
   const checkedHour = lessThanZero(hour);
 
+  // verificar valores para o progress bar
+  const totalTimeInSeconds = (hour * 60 * 60) + (minute * 60) + second;
+
   useEffect(() => {
+    setInitialTime(totalTimeInSeconds);
+    setInProgressTime(totalTimeInSeconds);
     const TIMER_SPEED = 1000;
     const interval = setInterval(() => {
       setSecond(second => second - 1);
       setCount(count => count - 1);
+      setInProgressTime(inProgressTime => inProgressTime - 1);
     }, TIMER_SPEED);
     return () => clearInterval(interval);
   }, []);
@@ -59,10 +71,12 @@ function Timer() {
 
   return (
     <div>
-      <h2>{`tempo ${activityTime ? 'atividade' : 'intervalo'}: ${count}`}</h2>
+      <img src={ activityTime ? atividade : intervalo } alt="" />
+      <h2>{`${activityTime ? 'atividade' : 'intervalo'}: ${count}`}</h2>
       <h2 className="timer">
-        { `Tempo Total: ${BellowTen(checkedHour)}:${BellowTen(checkedMinute)}:${BellowTen(second)}` }
+        { `Total: ${BellowTen(checkedHour)}:${BellowTen(checkedMinute)}:${BellowTen(second)}` }
       </h2>
+      <ProgressBar done={100 * inProgressTime / initialTime} color='#d12c2c'/>
     </div>
   );
 }
