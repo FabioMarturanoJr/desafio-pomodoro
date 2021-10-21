@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import PomodoroContext from "../context/PomodoroContext";
 
 function Timer() {
-  const [hour, setHour] = useState('00');
-  const [minute, setMinute] = useState('00');
-  const [second, setSecond] = useState('00');
-  const [activity, setActivity] = useState('zerado');
+  const {hour, minute, second, activity} = useContext(PomodoroContext);
 
   return (
     <div>

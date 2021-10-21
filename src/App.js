@@ -1,10 +1,13 @@
 import './App.css';
 import Timer from './components/Timer';
+import PomodoroProvider from './context/PomodoroProvider';
 
 function App() {
   return (
     <main>
-      <Timer/>
+      <PomodoroProvider>
+        <Timer/>
+      </PomodoroProvider>
     </main>
   );
 }
