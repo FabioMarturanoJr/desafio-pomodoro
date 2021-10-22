@@ -41,7 +41,7 @@ Como utilizar o temporizador:
 - Coloque o tempo total da tarefa que você pretende realizar e inicie o contador.
 
 Existe um aviso sonoro quando inicia a etapa de `realizar a atividade` e a etapa de `descanso`, além de uma indicativo visual para ambas as etapas,
-ao final do tempo existem ambas os indicativos também, porém com um bônus de uma `música relaxante` a fim de compensar o trabalho realizar.
+ao final do tempo existem ambas os indicativos também, porém com um bônus de uma `música relaxante` a fim de compensar o trabalho realizado.
 
 `Obs: vale lembrar que diferente do pomodoro real, o tempo da atividade e de descanso foram reduzidos para facilitar avaliação, porém logo após esse processo será corrigo`
 
