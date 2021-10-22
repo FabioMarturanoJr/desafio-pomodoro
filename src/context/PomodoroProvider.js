@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import PomodoroContext from './PomodoroContext';
 
 function PomodoroProvider({ children }) {
-  const [hour, setHour] = useState(0);
-  const [minute, setMinute] = useState(0);
+  const [hour, setHour] = useState();
+  const [minute, setMinute] = useState();
   const [second, setSecond] = useState(25);
   const [activityTime, setActivityTime] = useState(true);
   const [showTimer, setShowTimer] = useState(false);

@@ -16,12 +16,12 @@ body {
 } */
 
 .progress {
-	background-color: #d8d8d8;
+	background-color: #706e6e;
 	border-radius: 10px;
 	position: relative;
 	margin: 15px 0;
 	height: 10px;
-	width: 300px;
+	width: 100;
 }
 
 .progress-done {

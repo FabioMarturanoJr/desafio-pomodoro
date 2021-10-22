@@ -19,7 +19,7 @@ function Timer() {
   const checkedHour = lessThanZero(hour);
 
   // verificar valores para o progress bar
-  const totalTimeInSeconds = (hour * 60 * 60) + (minute * 60) + second;
+  const totalTimeInSeconds = (checkedHour * 60 * 60) + (checkedMinute * 60) + second;
 
   useEffect(() => {
     setInitialTime(totalTimeInSeconds);
@@ -71,7 +71,7 @@ function Timer() {
 
   return (
     <div>
-      <img src={ activityTime ? atividade : intervalo } alt="" />
+      <img src={ activityTime ? atividade : intervalo } alt="" style={ { border: `solid 20px ${ activityTime ?'#d12c2c' : '#39aa1d'}` } }/>
       <h2>{`${activityTime ? 'atividade' : 'intervalo'}: ${count}`}</h2>
       <h2 className="timer">
         { `Total: ${BellowTen(checkedHour)}:${BellowTen(checkedMinute)}:${BellowTen(second)}` }

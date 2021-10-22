@@ -11,11 +11,15 @@ function MainPomodoro() {
   const { showTimer } = useContext(PomodoroContext);
 
   return (
-    <div>
+    <div className="mainPomodoro">
+      <h1>Timer Pomodoro</h1>
       { showTimer && <Timer /> }
       { !showTimer && <TimePicker /> }
+      <div className="buttons">
       <OnOffSwitch />
-      { showTimer && <ResetButton /> }
+      { showTimer && <ResetButton /> }      
+      </div>
+      {/* <Player url={'../sounds/aah-01.mp3'}/> */}
     </div>
   );
 }
