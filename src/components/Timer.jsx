@@ -73,7 +73,7 @@ function Timer() {
       <div>
       { playSound && <Howler src={ activityTime ? 'uhh' : 'applause' } />}
       <img src={ activityTime ? atividade : intervalo } alt="" style={ { border: `solid 20px ${ activityTime ?'#d12c2c' : '#39aa1d'}` } }/>
-      <h2>{`${activityTime ? 'atividade' : 'intervalo'}: ${count}`}</h2>
+      <h2>{`${activityTime ? 'Atividade' : 'Intervalo'}: ${count}`}</h2>
       <h2 className="timer">
         { `Total: ${BellowTen(checkedHour)}:${BellowTen(checkedMinute)}:${BellowTen(second)}` }
       </h2>
