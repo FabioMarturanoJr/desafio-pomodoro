@@ -3,23 +3,12 @@ import PomodoroContext from "../context/PomodoroContext";
 
 
 function ResetButton() {
-  const { showTimer, setShowTimer, setSecond, setMinute, setHour, setCount, setPlaySound, setPause, setActivityTime } = useContext(PomodoroContext);
-
-  const resetAction = () => {
-    setShowTimer(!showTimer);
-    setSecond(25);
-    setMinute(0);
-    setHour(0);
-    setCount(25);
-    setPause(false);
-    setPlaySound(true);
-    setActivityTime(true);
-  };
+  const { resetPomodoro } = useContext(PomodoroContext);
 
   return (
     <button
     type="button"
-    onClick={ resetAction }
+    onClick={ resetPomodoro }
     >
       Resetar Pomodoro
     </button>

@@ -13,7 +13,19 @@ function PomodoroProvider({ children }) {
   const [inProgressTime, setInProgressTime] = useState(0);
   const [playSound, setPlaySound] = useState(true);
   const [pause, setPause] = useState(false);
-  
+  const [showCompleteTask, setShowCompleteTask] = useState(false);
+
+  const resetPomodoro = () => {
+    setSecond(25);
+    setMinute();
+    setHour();
+    setCount(25);
+    setActivityTime(true);
+    setShowTimer(false);
+    setPlaySound(true);
+    setPause(false);
+    setShowCompleteTask(false);
+  };
 
   return(
     <PomodoroContext.Provider
@@ -38,6 +50,9 @@ function PomodoroProvider({ children }) {
         setPlaySound,
         pause,
         setPause,
+        showCompleteTask,
+        setShowCompleteTask,
+        resetPomodoro,
       } }
     >
       { children }

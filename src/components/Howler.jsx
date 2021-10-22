@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactHowler from 'react-howler'
 
-import ahh from '../sounds/aah-01.mp3'
+import ahh from '../sounds/aah.mp3'
+import uhh from '../sounds/uhh.mp3'
 import applause from '../sounds/Applause.mp3'
 
 const sonds = {
   ahh,
-  applause
+  applause,
+  uhh,
 };
 
 function Howler({ src }) {

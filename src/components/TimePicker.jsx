@@ -6,7 +6,7 @@ function TimePicker() {
 
   return (
     <div className="timePicker">
-      <p> selecione o tempo total da atividade </p>
+      <p>Insira o tempo total da tarefa </p>
       <input name="hour" type="number" placeholder="hora" value={hour} max="59" onChange={ ({ target: { value } }) => setHour(Number(value)) } />
       <input name="minute" type="number" placeholder="minuto" value={minute} max="59" onChange={ ({  target: { value }  }) => setMinute(Number(value)) } />
       <input name="seconds" type="number" placeholder="segundo" value={second} max="59" onChange={ ({ target: { value } }) => setSecond(Number(value)) } />
