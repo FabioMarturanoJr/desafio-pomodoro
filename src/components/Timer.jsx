@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect } from "react";
 import PomodoroContext from "../context/PomodoroContext";
+// import { useAudioPlayer } from "react-use-audio-player"
 
 import ProgressBar from './ProgressBar';
+import Howler from "./Howler";
 import atividade from '../assets/atividade.gif'
 import intervalo from '../assets/intervalo.gif'
 
@@ -13,17 +15,17 @@ const BellowTen = (number) => (number < TEN ? `0${number}` : number);
 
 
 function Timer() {
-  const { hour, minute, second, activityTime, setSecond, setMinute, setHour, setShowTimer, setActivityTime, count, setCount, setInitialTime, setInProgressTime, initialTime, inProgressTime } = useContext(PomodoroContext);
+  const { hour, minute, second, activityTime, setSecond, setMinute, setHour, setShowTimer, setActivityTime, count, setCount, setInitialTime, setInProgressTime, initialTime, inProgressTime, playSound, setPlaySound, setPause } = useContext(PomodoroContext);
 
   const checkedMinute = lessThanZero(minute);
   const checkedHour = lessThanZero(hour);
 
-  // verificar valores para o progress bar
   const totalTimeInSeconds = (checkedHour * 60 * 60) + (checkedMinute * 60) + second;
 
   useEffect(() => {
     setInitialTime(totalTimeInSeconds);
     setInProgressTime(totalTimeInSeconds);
+
     const TIMER_SPEED = 1000;
     const interval = setInterval(() => {
       setSecond(second => second - 1);
@@ -42,7 +44,10 @@ function Timer() {
     if (count === 1) {
       setCount(activityTime ? 5 : 25 );
       setActivityTime(!activityTime);
+      setPlaySound(true);
     }
+
+    if (count === 2 || count === 23) setPlaySound(false);
 
     switch (true) {
       case checkedHour === MIN_HOUR && checkedMinute === MIN_MINUTE && second === MIN_SECOND:
@@ -51,8 +56,10 @@ function Timer() {
           setMinute(0);
           setHour(0);
           setCount(25);
-          setActivityTime(!activityTime);
+          setActivityTime(true);
           setShowTimer(false);
+          setPlaySound(true);
+          setPause(false);
         break;
       case checkedMinute === MIN_MINUTE && second === MIN_SECOND:
         setSecond(S9);
@@ -71,6 +78,7 @@ function Timer() {
 
   return (
     <div>
+      {playSound && <Howler src={ activityTime ? 'ahh' : 'applause' } />}
       <img src={ activityTime ? atividade : intervalo } alt="" style={ { border: `solid 20px ${ activityTime ?'#d12c2c' : '#39aa1d'}` } }/>
       <h2>{`${activityTime ? 'atividade' : 'intervalo'}: ${count}`}</h2>
       <h2 className="timer">

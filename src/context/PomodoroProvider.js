@@ -11,6 +11,8 @@ function PomodoroProvider({ children }) {
   const [count, setCount] = useState(25);
   const [initialTime, setInitialTime] = useState(0);
   const [inProgressTime, setInProgressTime] = useState(0);
+  const [playSound, setPlaySound] = useState(true);
+  const [pause, setPause] = useState(false);
   
 
   return(
@@ -31,7 +33,11 @@ function PomodoroProvider({ children }) {
         initialTime,
         setInitialTime,
         inProgressTime,
-        setInProgressTime
+        setInProgressTime,
+        playSound,
+        setPlaySound,
+        pause,
+        setPause,
       } }
     >
       { children }

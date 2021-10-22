@@ -1,12 +1,14 @@
-import React, { useContext }   from 'react';
+import React, { useContext, useState }   from 'react';
 import PomodoroContext from "../context/PomodoroContext";
 
 
 function OnOffSwitch() {
-  const { showTimer, setShowTimer } = useContext(PomodoroContext);  
+  const { showTimer, setShowTimer, setPlaySound,pause, setPause } = useContext(PomodoroContext);
   
   const clickButton = () => {
-    setShowTimer(!showTimer)
+    setShowTimer(!showTimer);
+    pause && setPlaySound(false);
+    setPause(true);
   };
 
   return (

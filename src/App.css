@@ -23,7 +23,7 @@
 }
 
 main {
-  margin: 40px;
+  margin: 25px;
   height: 600px;
   border-radius: 5px;
   /* min-height: 100vh; */
@@ -61,6 +61,12 @@ input {
 }
 
 img {
-  height: 250px;
+  height: 280px;
   border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  img {
+    height: 20vh;
+  }
 }
