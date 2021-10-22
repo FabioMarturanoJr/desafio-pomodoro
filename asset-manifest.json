@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/desafio-pomodoro/static/css/main.a617e044.chunk.css",
-    "main.js": "/desafio-pomodoro/static/js/main.925cb3b6.chunk.js",
-    "main.js.map": "/desafio-pomodoro/static/js/main.925cb3b6.chunk.js.map",
-    "runtime-main.js": "/desafio-pomodoro/static/js/runtime-main.dc93e22d.js",
-    "runtime-main.js.map": "/desafio-pomodoro/static/js/runtime-main.dc93e22d.js.map",
-    "static/js/2.deb2b188.chunk.js": "/desafio-pomodoro/static/js/2.deb2b188.chunk.js",
-    "static/js/2.deb2b188.chunk.js.map": "/desafio-pomodoro/static/js/2.deb2b188.chunk.js.map",
-    "static/js/3.22fa0f7c.chunk.js": "/desafio-pomodoro/static/js/3.22fa0f7c.chunk.js",
-    "static/js/3.22fa0f7c.chunk.js.map": "/desafio-pomodoro/static/js/3.22fa0f7c.chunk.js.map",
+    "main.css": "/desafio-pomodoro/static/css/main.8a92b03e.chunk.css",
+    "main.js": "/desafio-pomodoro/static/js/main.fb049688.chunk.js",
+    "main.js.map": "/desafio-pomodoro/static/js/main.fb049688.chunk.js.map",
+    "runtime-main.js": "/desafio-pomodoro/static/js/runtime-main.2d348ba0.js",
+    "runtime-main.js.map": "/desafio-pomodoro/static/js/runtime-main.2d348ba0.js.map",
+    "static/js/2.5c968dbc.chunk.js": "/desafio-pomodoro/static/js/2.5c968dbc.chunk.js",
+    "static/js/2.5c968dbc.chunk.js.map": "/desafio-pomodoro/static/js/2.5c968dbc.chunk.js.map",
+    "static/js/3.6a745507.chunk.js": "/desafio-pomodoro/static/js/3.6a745507.chunk.js",
+    "static/js/3.6a745507.chunk.js.map": "/desafio-pomodoro/static/js/3.6a745507.chunk.js.map",
     "index.html": "/desafio-pomodoro/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/desafio-pomodoro/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.deb2b188.chunk.js.LICENSE.txt": "/desafio-pomodoro/static/js/2.deb2b188.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/desafio-pomodoro/static/media/logo.6ce24c58.svg"
+    "static/css/main.8a92b03e.chunk.css.map": "/desafio-pomodoro/static/css/main.8a92b03e.chunk.css.map",
+    "static/js/2.5c968dbc.chunk.js.LICENSE.txt": "/desafio-pomodoro/static/js/2.5c968dbc.chunk.js.LICENSE.txt",
+    "static/media/atividade.be4981c4.gif": "/desafio-pomodoro/static/media/atividade.be4981c4.gif",
+    "static/media/intervalo.19a182bb.gif": "/desafio-pomodoro/static/media/intervalo.19a182bb.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.dc93e22d.js",
-    "static/js/2.deb2b188.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.925cb3b6.chunk.js"
+    "static/js/runtime-main.2d348ba0.js",
+    "static/js/2.5c968dbc.chunk.js",
+    "static/css/main.8a92b03e.chunk.css",
+    "static/js/main.fb049688.chunk.js"
   ]
 }
