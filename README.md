@@ -1,3 +1,3 @@
 # Deploy
 
-`https://fabiomarturanojr.github.io/desafio-pomodoro/`
+https://fabiomarturanojr.github.io/desafio-pomodoro/
