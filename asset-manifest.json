@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/desafio-pomodoro/static/css/main.6e1e39dd.chunk.css",
-    "main.js": "/desafio-pomodoro/static/js/main.8c2056c1.chunk.js",
-    "main.js.map": "/desafio-pomodoro/static/js/main.8c2056c1.chunk.js.map",
+    "main.js": "/desafio-pomodoro/static/js/main.2a509e15.chunk.js",
+    "main.js.map": "/desafio-pomodoro/static/js/main.2a509e15.chunk.js.map",
     "runtime-main.js": "/desafio-pomodoro/static/js/runtime-main.19dd2101.js",
     "runtime-main.js.map": "/desafio-pomodoro/static/js/runtime-main.19dd2101.js.map",
     "static/js/2.593a37bc.chunk.js": "/desafio-pomodoro/static/js/2.593a37bc.chunk.js",
@@ -16,12 +16,13 @@
     "static/media/aah.b3390279.mp3": "/desafio-pomodoro/static/media/aah.b3390279.mp3",
     "static/media/atividade.be4981c4.gif": "/desafio-pomodoro/static/media/atividade.be4981c4.gif",
     "static/media/intervalo.19a182bb.gif": "/desafio-pomodoro/static/media/intervalo.19a182bb.gif",
-    "static/media/uhh.c8e3e974.mp3": "/desafio-pomodoro/static/media/uhh.c8e3e974.mp3"
+    "static/media/uhh.c8e3e974.mp3": "/desafio-pomodoro/static/media/uhh.c8e3e974.mp3",
+    "static/media/zelda.9c046368.mp3": "/desafio-pomodoro/static/media/zelda.9c046368.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.19dd2101.js",
     "static/js/2.593a37bc.chunk.js",
     "static/css/main.6e1e39dd.chunk.css",
-    "static/js/main.8c2056c1.chunk.js"
+    "static/js/main.2a509e15.chunk.js"
   ]
 }
